@@ -30,7 +30,7 @@
           >
             Your-Cart-{{ this.getCart().length }}
           </a>
-          <div id="dropdown" class="dropdown-menu mr-5" aria-labelledby="navbarDropdownMenuLink">
+          <div id="dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <ul>
               <li v-for="item in getCart()" :key="item">
                 <a id="cartList" class="dropdown-item" href="#">{{ item.title }}</a>
@@ -88,7 +88,7 @@ export default {
     text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
 }
 #dropdown{
-  width:200px; 
+  width:100px; 
    word-break: break-word;
    
 

@@ -5,6 +5,7 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Category</th>
+          <th scope="col">Product Image</th>
           <th scope="col">Product</th>
           <th scope="col">Price</th>
           <th scope="col"></th>
@@ -14,6 +15,7 @@
         <tr v-for="item in cart[0]" :key="item">
           <th scope="row">{{ item.id }}</th>
           <td>{{ item.category }}</td>
+          <td><img id="littleImg" :src="item.image" ></td>
           <td>{{ item.title }}</td>
           <td>{{ item.price }}</td>
           <td><div class="btn btn-danger" @click="removeFromCart(item)">Remove</div></td>
@@ -55,3 +57,9 @@ export default {
   
 };
 </script>
+<style>
+#littleImg{
+  width: 50px;
+  height: 50px;
+}
+</style>

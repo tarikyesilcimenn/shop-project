@@ -90,7 +90,7 @@ export default {
   height: 400px;
 }
 #button{
-  margin-top: 50px;
+  
   border-radius: 70px;
 }
 #title{

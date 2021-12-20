@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light" >
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="http://localhost:8080/">
-      <img id="img" src="./logo.png"
-    /> </a>
+      <img id="img" src="./logo.png" />
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -19,6 +19,9 @@
       id="navbarNavDropdown"
     >
       <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:8080/login">Login </a>
+        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -30,22 +33,21 @@
           >
             Your-Cart-{{ this.getCart().length }}
           </a>
-          <div id="dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div
+            id="dropdown"
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
             <ul>
               <li v-for="item in getCart()" :key="item">
-                <a id="cartList" class="dropdown-item" href="#">{{ item.title }}</a>
+                <a id="cartList" class="dropdown-item" href="#">{{
+                  item.title
+                }}</a>
               </li>
-              <a href="http://localhost:8080/cart"
-                >GO TO CART
-                <router-link to="http://localhost:8080/cart"></router-link>
-              </a>
+              <a href="http://localhost:8080/cart">GO TO CART </a>
             </ul>
           </div>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-        
       </ul>
     </div>
   </nav>
@@ -76,21 +78,18 @@ export default {
 };
 </script>
 <style>
-#img{
+#img {
   margin-left: 20px;
   width: 130px;
-  height:90px;
+  height: 90px;
 }
-#cartList{
-  
-    overflow: hidden; /* taşanları gizle */
-    white-space: nowrap; /* alt satıra hiç inme */
-    text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
+#cartList {
+  overflow: hidden; /* taşanları gizle */
+  white-space: nowrap; /* alt satıra hiç inme */
+  text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
 }
-#dropdown{
-  width:100px; 
-   word-break: break-word;
-   
-
+#dropdown {
+  width: 100px;
+  word-break: break-word;
 }
 </style>

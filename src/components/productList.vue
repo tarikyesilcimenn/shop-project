@@ -82,9 +82,8 @@ export default {
 }
 #cardBody{
   width: 300px;
-    overflow: hidden; /* taşanları gizle */
-    white-space: nowrap; /* alt satıra hiç inme */
-    text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
+
+    word-break: break-word;
 }
 #cardImg {
   width: 300px;
@@ -97,5 +96,11 @@ export default {
 #title{
   font-family:Arial, Helvetica, sans-serif;
   font-weight: bold;
+  word-break: break-word;
+}
+.card-text{
+      overflow: hidden; /* taşanları gizle */
+    white-space: nowrap; /* alt satıra hiç inme */
+    text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
 }
 </style>

@@ -17,7 +17,7 @@
           <td>{{ item.category }}</td>
           <td><img id="littleImg" :src="item.image" ></td>
           <td>{{ item.title }}</td>
-          <td>{{ item.price }}</td>
+          <td>{{ item.price }}$</td>
           <td><div class="btn btn-danger" @click="removeFromCart(item)">Remove</div></td>
         </tr>
       </tbody>

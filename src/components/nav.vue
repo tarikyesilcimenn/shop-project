@@ -19,9 +19,6 @@
       id="navbarNavDropdown"
     >
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="http://localhost:8080/login">Login </a>
-        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -48,6 +45,10 @@
             </ul>
           </div>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:8080/login">Login </a>
+        </li>
+        
       </ul>
     </div>
   </nav>
@@ -87,9 +88,14 @@ export default {
   overflow: hidden; /* taşanları gizle */
   white-space: nowrap; /* alt satıra hiç inme */
   text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
+  word-break: break-all;
+   margin-right: 0;
+
+  
 }
-#dropdown {
-  width: 100px;
-  word-break: break-word;
+#dropdown{
+  width: 30px;
+ 
 }
+
 </style>

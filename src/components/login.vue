@@ -2,7 +2,7 @@
   <div>
     <div class="column">
       <div class="d-flex flex-column  align-items-center">
-        <div id="box" class="row shadow p-3 mb-5 bg-white rounded">
+        <div id="box" class="row shadow-lg p-3 mb-5 bg-white rounded">
           <div class="container">
             <h3>Email</h3>
 
@@ -22,18 +22,43 @@
     </div>
   </div> 
 </template>
+<script>
+
+import { mapActions, mapGetters, mapMutations } from 'vuex';
+export default {
+  computed:{
+  ...mapGetters({
+      getUsers:"getUsers"
+    }),
+    
+  },
+  methods:{
+    ...mapActions({
+      usersFetch:"usersFetch"
+    }),
+    
+  },
+  created(){
+    this.usersFetch();
+    this.getUsers;
+  }
+}
+</script>
 <style>
 #btn {
   width: 189px;
   border-radius: 20px;
 }
-#box {
-    
-   
-}
 h5{
     display: flex;
     justify-content: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, ;
+    margin-top: 5px;
+}
+h3{
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
 }
 </style>

@@ -48,11 +48,6 @@ export default {
     ...mapMutations({
       addToCart: "addToCart",
     }),
-
-    // addToCart(productId) {
-    //   console.log(productId)
-    //   this.$emit("id", productId);
-    // },
   },
   created() {
     this.productFetch();

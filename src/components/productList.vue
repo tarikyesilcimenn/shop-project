@@ -64,38 +64,35 @@ export default {
   width: 300px;
   height: 600px;
   transition: 1s;
-  
 }
-#card:hover{
-    transition-property: background-color;
+#card:hover {
+  transition-property: background-color;
   transition-duration: 500ms;
-  background-color:skyblue ;
+  background-color: skyblue;
   margin-top: -70px;
-  transform:scale(1.3);
-  background-color:#43cd80;
-
+  transform: scale(1.3);
+  background-color: #43cd80;
 }
-#cardBody{
+#cardBody {
   width: 300px;
 
-    word-break: break-word;
+  word-break: break-word;
 }
 #cardImg {
   width: 300px;
   height: 400px;
 }
-#button{
-  
+#button {
   border-radius: 70px;
 }
-#title{
-  font-family:Arial, Helvetica, sans-serif;
+#title {
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   word-break: break-word;
 }
-.card-text{
-      overflow: hidden; /* taşanları gizle */
-    white-space: nowrap; /* alt satıra hiç inme */
-    text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
+.card-text {
+  overflow: hidden; /* taşanları gizle */
+  white-space: nowrap; /* alt satıra hiç inme */
+  text-overflow: ellipsis; /* eğer uzunsa üç nokta koy */
 }
 </style>
